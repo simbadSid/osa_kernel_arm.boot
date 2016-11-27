@@ -89,8 +89,7 @@ And in the second terminal:
 	
 You are in, the debugger has started and connected to Qemu. Qemu is stopped before the very first
 instruction executed by the processor upon waking up. Indeed, ARM processors wake up at 0x0000-0000.
-At this place is the boot code of your platform, the code that will do a minimal setup of your hardware,
-such as configuring your memory controller so that you can access your RAM. 
+At this place is the boot code of your platform, the code that will do a minimal setup of your hardware, such as configuring your memory controller so that you can access your RAM. 
 
 Look at the .gdbinit file in the project directory to see how gdb has been automatically configured
 for you.
@@ -121,8 +120,7 @@ Debugging an emulation on Qemu
 	ECLIPSE DEBUGGING
 --------------------------------------------------------------------
 
-You can also debug from Eclipse. You will need to start Qemu manually,
-and you will need to launch the debugger from Eclipse.
+You can also debug from Eclipse. You will need to start Qemu manually, and you will need to launch the debugger from Eclipse.
 You are given a launch configuration for Eclipse:
 	 arm.boot.qemu.launch in the project. 
 

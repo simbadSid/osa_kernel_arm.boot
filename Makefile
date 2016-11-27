@@ -1,7 +1,9 @@
 
 QEMU=/usr/bin/qemu-system-arm
 QEMU=/homex/opt/qemu.git/arm-softmmu/qemu-system-arm
-TOOLCHAIN=/homex/opt/gcc-arm-none-eabi-4_8-2014q3/bin
+TOOLCHAIN=/usr/local/bin/gcc-arm-none-eabi-4_8-2014q3/bin/
+
+
 
 ASFLAGS= -mcpu=arm926ej-s -g 
 CFLAGS= -c -mcpu=arm926ej-s -g 

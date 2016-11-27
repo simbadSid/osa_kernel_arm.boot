@@ -1,6 +1,6 @@
 .global _entry
 _entry:
- ldr sp, =stack_top
+	ldr sp, =stack_top
 
 	/*--------------------------------------------------------------
 	 * we're loaded at _load and we need to relocate
@@ -19,16 +19,16 @@ _entry:
 	 * and data towards the end of memory, towards high addresses.
 	 *-------------------------------------------*/
 .relocate:
-	ldr     r3,=_load 
-	ldr	r4, =_start
+	ldr     r3,=_load
+	ldr	    r4, =_start
 	cmp     r3,r4
 	beq     .clear
-	ldr	r9, =_bss_start 
+	ldr     r9, =_bss_start
 1:
-	ldmia	r3!, {r5-r8} // load multiple from r3
-	stmia	r4!, {r5-r8} // store multiple at r4
+	ldmia	r3!, {r5-r8}	// load multiple from r3 (address of _load)
+	stmia	r4!, {r5-r8}	// store multiple at r4  (address of _start)
 
-	cmp	r4, r9 // are we done yet?
+	cmp	r4, r9				// are we done yet?
 	blo	1b
 
 	/*-------------------------------------------
