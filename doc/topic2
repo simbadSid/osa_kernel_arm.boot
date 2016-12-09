@@ -1,0 +1,29 @@
+We will have time Tuesday to discuss the code.
+
+
+     - You need to understand the Makefile and the tools used 
+(gcc/ld/as/objcopy)
+
+     - Read about the ELF format and play with objdump on the produce 
+test.elf.
+
+       -> check that the code is layed out as the linker script says it is.
+
+     - Read about linker scripts
+
+       Play around with it.
+
+     - Learn about gdb and C debugging if you are not fluent.
+
+       Learn about the GDB stub embedded in Qemu.
+
+      Try out debugging from gdb in command line, from Eclipse, or using 
+DDD.
+
+      For DDD, if the fonts are ugly, you can change them in the DDD 
+startup file.
+
+    - Read/learn about the GIC/GID specification from ARM
+
+      The Generic Interrupt Controller and the Generic Interrupt 
+Distributor.

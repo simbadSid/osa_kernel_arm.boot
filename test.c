@@ -22,14 +22,15 @@
 #define UART1 0x101f2000
 #define UART2 0x101f3000
 
-#define UART_DR 0x00
-#define UART_FR 0x18
+#define UART_DR 0x00		// Data register
+#define UART_FR 0x18		// Flag register
 
-#define UART_TXFE (1<<7)
-#define UART_RXFF (1<<6)
-#define UART_TXFF (1<<5)
-#define UART_RXFE (1<<4)
-#define UART_BUSY (1<<3)
+							// Flag positions
+#define UART_TXFE (1<<7)	//		Transmit FIFO emtpy
+#define UART_RXFF (1<<6)	//		Receive FIFO full
+#define UART_TXFF (1<<5)	//		Transmit FIFO full
+#define UART_RXFE (1<<4)	//		Receive FIFO empty
+#define UART_BUSY (1<<3)	//
 
 
 

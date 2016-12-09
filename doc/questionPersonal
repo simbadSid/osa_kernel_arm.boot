@@ -1,0 +1,6 @@
+
+
+
+
+	- Why do we need to run "objcopy" after "ld".   The "ld" will reallocate all the symbolic references to physical address. 
+	

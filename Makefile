@@ -1,7 +1,7 @@
 
-QEMU=/usr/bin/qemu-system-arm
-QEMU=/homex/opt/qemu.git/arm-softmmu/qemu-system-arm
-TOOLCHAIN=/usr/local/bin/gcc-arm-none-eabi-4_8-2014q3/bin/
+QEMU=qemu-system-arm
+#QEMU=/homex/opt/qemu.git/arm-softmmu/qemu-system-arm
+TOOLCHAIN=/usr/local/bin/gcc-arm-none-eabi-4_8-2014q3/bin
 
 
 
@@ -13,7 +13,7 @@ all: startup.o test.o
 	$(TOOLCHAIN)/arm-none-eabi-ld $(LDFLAGS) test.o startup.o -o test.elf
 	$(TOOLCHAIN)/arm-none-eabi-objcopy -O binary test.elf test.bin
 
-clean: 
+clean:
 	rm -f startup.o test.o test.elf
 
 startup.o: startup.s
